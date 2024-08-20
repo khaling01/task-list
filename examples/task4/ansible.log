@@ -1,0 +1,181 @@
+2024-08-17 14:14:04,060 p=10695 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 14:14:04,075 p=10695 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 14:14:05,989 p=10695 u=vagrant n=ansible | ok: [db1]
+2024-08-17 14:14:06,009 p=10695 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 14:14:10,641 p=10695 u=vagrant n=ansible | ok: [db1]
+2024-08-17 14:14:10,662 p=10695 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 14:14:12,531 p=10695 u=vagrant n=ansible | changed: [db1]
+2024-08-17 14:14:12,544 p=10695 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 14:14:13,601 p=10695 u=vagrant n=ansible | changed: [db1]
+2024-08-17 14:14:13,615 p=10695 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 14:14:14,309 p=10695 u=vagrant n=ansible | fatal: [db1]: FAILED! => {"changed": false, "msg": "unable to find /root/.my.cnf. Exception message: (2003, \"Can't connect to MySQL server on 'localhost' ([Errno 2] No such file or directory)\")"}
+2024-08-17 14:14:14,314 p=10695 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 14:14:14,315 p=10695 u=vagrant n=ansible | db1                        : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 14:52:48,548 p=12701 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 14:52:48,576 p=12701 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 14:52:55,768 p=12701 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:52:55,822 p=12701 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 14:53:00,534 p=12701 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:53:00,577 p=12701 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 14:53:03,264 p=12701 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "No package matching 'python3-PyMySQL' is available"}
+2024-08-17 14:53:03,272 p=12701 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 14:53:03,273 p=12701 u=vagrant n=ansible | web1                       : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 14:54:11,492 p=13060 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 14:54:11,520 p=13060 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 14:54:16,891 p=13060 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:54:16,946 p=13060 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 14:54:20,152 p=13060 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:54:20,184 p=13060 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 14:54:26,341 p=13060 u=vagrant n=ansible | changed: [web1]
+2024-08-17 14:54:26,386 p=13060 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 14:54:29,432 p=13060 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:54:29,466 p=13060 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 14:54:30,795 p=13060 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "A MySQL module is required: for Python 2.7 either PyMySQL, or MySQL-python, or for Python 3.X mysqlclient or PyMySQL. Consider setting ansible_python_interpreter to use the intended Python version."}
+2024-08-17 14:54:30,804 p=13060 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 14:54:30,806 p=13060 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 14:56:38,010 p=13511 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 14:56:38,054 p=13511 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 14:56:44,760 p=13511 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:56:44,814 p=13511 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 14:56:48,107 p=13511 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:56:48,140 p=13511 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 14:56:53,785 p=13511 u=vagrant n=ansible | changed: [web1]
+2024-08-17 14:56:53,823 p=13511 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 14:56:56,137 p=13511 u=vagrant n=ansible | ok: [web1]
+2024-08-17 14:56:56,173 p=13511 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 14:56:57,496 p=13511 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "A MySQL module is required: for Python 2.7 either PyMySQL, or MySQL-python, or for Python 3.X mysqlclient or PyMySQL. Consider setting ansible_python_interpreter to use the intended Python version."}
+2024-08-17 14:56:57,505 p=13511 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 14:56:57,507 p=13511 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 15:28:28,689 p=2792 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 15:28:28,767 p=2792 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 15:28:38,044 p=2792 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:28:38,097 p=2792 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 15:28:44,643 p=2792 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:28:44,676 p=2792 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 15:28:52,025 p=2792 u=vagrant n=ansible | changed: [web1]
+2024-08-17 15:28:52,072 p=2792 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 15:28:54,614 p=2792 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:28:54,647 p=2792 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 15:28:56,375 p=2792 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "A MySQL module is required: for Python 2.7 either PyMySQL, or MySQL-python, or for Python 3.X mysqlclient or PyMySQL. Consider setting ansible_python_interpreter to use the intended Python version."}
+2024-08-17 15:28:56,383 p=2792 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 15:28:56,384 p=2792 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 15:30:36,765 p=3239 u=vagrant n=ansible | web1 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_python_version": "3.8.10",
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false
+}
+2024-08-17 15:40:33,673 p=3947 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 15:40:33,702 p=3947 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 15:40:39,215 p=3947 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:40:39,267 p=3947 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 15:40:42,524 p=3947 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:40:42,558 p=3947 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 15:40:44,868 p=3947 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:40:44,900 p=3947 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 15:40:50,542 p=3947 u=vagrant n=ansible | changed: [web1]
+2024-08-17 15:40:50,573 p=3947 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 15:40:51,882 p=3947 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "A MySQL module is required: for Python 2.7 either PyMySQL, or MySQL-python, or for Python 3.X mysqlclient or PyMySQL. Consider setting ansible_python_interpreter to use the intended Python version."}
+2024-08-17 15:40:51,889 p=3947 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 15:40:51,890 p=3947 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 15:48:30,498 p=4699 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 15:48:30,524 p=4699 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 15:48:35,765 p=4699 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:48:35,819 p=4699 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 15:48:39,038 p=4699 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:48:39,071 p=4699 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 15:48:41,358 p=4699 u=vagrant n=ansible | ok: [web1]
+2024-08-17 15:48:41,403 p=4699 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 15:48:47,090 p=4699 u=vagrant n=ansible | changed: [web1]
+2024-08-17 15:48:47,121 p=4699 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 15:48:48,426 p=4699 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "A MySQL module is required: for Python 2.7 either PyMySQL, or MySQL-python, or for Python 3.X mysqlclient or PyMySQL. Consider setting ansible_python_interpreter to use the intended Python version."}
+2024-08-17 15:48:48,435 p=4699 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 15:48:48,436 p=4699 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 16:05:22,006 p=6252 u=vagrant n=ansible | PLAY [Setup DB server] *********************************************************
+2024-08-17 16:05:22,034 p=6252 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 16:05:27,810 p=6252 u=vagrant n=ansible | ok: [web1]
+2024-08-17 16:05:27,865 p=6252 u=vagrant n=ansible | TASK [Install MySQL server] ****************************************************
+2024-08-17 16:05:35,199 p=6252 u=vagrant n=ansible | ok: [web1]
+2024-08-17 16:05:35,241 p=6252 u=vagrant n=ansible | TASK [Start & Enable mariadb service] ******************************************
+2024-08-17 16:05:37,481 p=6252 u=vagrant n=ansible | ok: [web1]
+2024-08-17 16:05:37,513 p=6252 u=vagrant n=ansible | TASK [Install Python MySQL] ****************************************************
+2024-08-17 16:05:40,116 p=6252 u=vagrant n=ansible | ok: [web1]
+2024-08-17 16:05:40,148 p=6252 u=vagrant n=ansible | TASK [Create new database] *****************************************************
+2024-08-17 16:05:41,715 p=6252 u=vagrant n=ansible | changed: [web1]
+2024-08-17 16:05:41,753 p=6252 u=vagrant n=ansible | TASK [Create database user] ****************************************************
+2024-08-17 16:05:43,835 p=6252 u=vagrant n=ansible | changed: [web1]
+2024-08-17 16:05:43,895 p=6252 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 16:05:43,896 p=6252 u=vagrant n=ansible | web1                       : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-17 16:41:46,824 p=8100 u=vagrant n=ansible | PLAY [Setup dbserver] **********************************************************
+2024-08-17 16:41:46,851 p=8100 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 16:41:54,199 p=8100 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:41:54,248 p=8100 u=vagrant n=ansible | TASK [install apache2] *********************************************************
+2024-08-17 16:41:56,787 p=8100 u=vagrant n=ansible | fatal: [db1]: FAILED! => {"changed": false, "msg": "python3-apt must be installed to use check mode. If run normally this module can auto-install it."}
+2024-08-17 16:41:56,798 p=8100 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 16:41:56,799 p=8100 u=vagrant n=ansible | db1                        : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 16:43:22,977 p=8213 u=vagrant n=ansible | PLAY [Setup dbserver] **********************************************************
+2024-08-17 16:43:23,007 p=8213 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 16:43:27,675 p=8213 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:43:27,742 p=8213 u=vagrant n=ansible | TASK [install apache2] *********************************************************
+2024-08-17 16:43:42,387 p=8213 u=vagrant n=ansible | fatal: [db1]: FAILED! => {"changed": false, "failures": ["No package apache2 available."], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2024-08-17 16:43:42,396 p=8213 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 16:43:42,408 p=8213 u=vagrant n=ansible | db1                        : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 16:45:01,220 p=8324 u=vagrant n=ansible | PLAY [Setup dbserver] **********************************************************
+2024-08-17 16:45:01,251 p=8324 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 16:45:05,473 p=8324 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:45:05,522 p=8324 u=vagrant n=ansible | TASK [install apache2] *********************************************************
+2024-08-17 16:45:14,771 p=8324 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:45:14,801 p=8324 u=vagrant n=ansible | TASK [start apache2] ***********************************************************
+2024-08-17 16:45:18,655 p=8324 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:45:18,686 p=8324 u=vagrant n=ansible | TASK [deploy webconfig] ********************************************************
+2024-08-17 16:45:20,350 p=8324 u=vagrant n=ansible | fatal: [db1]: FAILED! => {"changed": false, "msg": "src option requires state to be 'link' or 'hard'", "path": "/var/www/html/index.html"}
+2024-08-17 16:45:20,361 p=8324 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 16:45:20,363 p=8324 u=vagrant n=ansible | db1                        : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-17 16:50:29,156 p=8656 u=vagrant n=ansible | PLAY [Setup dbserver] **********************************************************
+2024-08-17 16:50:29,181 p=8656 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 16:50:33,628 p=8656 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:50:33,680 p=8656 u=vagrant n=ansible | TASK [install apache2] *********************************************************
+2024-08-17 16:51:17,766 p=8656 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:51:17,814 p=8656 u=vagrant n=ansible | TASK [start apache2] ***********************************************************
+2024-08-17 16:51:20,575 p=8656 u=vagrant n=ansible | ok: [db1]
+2024-08-17 16:51:20,622 p=8656 u=vagrant n=ansible | TASK [deploy webconfig] ********************************************************
+2024-08-17 16:51:22,251 p=8656 u=vagrant n=ansible | changed: [db1]
+2024-08-17 16:51:22,306 p=8656 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 16:51:22,308 p=8656 u=vagrant n=ansible | db1                        : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-17 17:18:07,587 p=10092 u=vagrant n=ansible | PLAY [Install packages on CentOS] **********************************************
+2024-08-17 17:18:07,597 p=10092 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 17:18:09,577 p=10092 u=vagrant n=ansible | ok: [db1]
+2024-08-17 17:18:09,740 p=10092 u=vagrant n=ansible | ok: [web1]
+2024-08-17 17:18:09,765 p=10092 u=vagrant n=ansible | TASK [Install required packages on CentOS] *************************************
+2024-08-17 17:18:09,803 p=10092 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2024-08-17 17:18:09,812 p=10092 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2024-08-17 17:18:09,821 p=10092 u=vagrant n=ansible | skipping: [web1] => (item=httpd) 
+2024-08-17 17:18:09,835 p=10092 u=vagrant n=ansible | skipping: [web1] => (item=curl) 
+2024-08-17 17:18:09,836 p=10092 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2024-08-17 17:18:09,839 p=10092 u=vagrant n=ansible | skipping: [db1] => (item=git) 
+2024-08-17 17:18:09,846 p=10092 u=vagrant n=ansible | skipping: [db1] => (item=wget) 
+2024-08-17 17:18:09,847 p=10092 u=vagrant n=ansible | skipping: [db1] => (item=httpd) 
+2024-08-17 17:18:09,855 p=10092 u=vagrant n=ansible | skipping: [db1] => (item=curl) 
+2024-08-17 17:18:09,856 p=10092 u=vagrant n=ansible | skipping: [db1] => (item=chrony) 
+2024-08-17 17:18:09,884 p=10092 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 17:18:09,885 p=10092 u=vagrant n=ansible | db1                        : ok=1    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-17 17:18:09,886 p=10092 u=vagrant n=ansible | web1                       : ok=1    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-17 17:26:13,407 p=10604 u=vagrant n=ansible | PLAY [Install packages on CentOS] **********************************************
+2024-08-17 17:26:13,418 p=10604 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2024-08-17 17:26:15,479 p=10604 u=vagrant n=ansible | ok: [db1]
+2024-08-17 17:26:16,008 p=10604 u=vagrant n=ansible | ok: [web1]
+2024-08-17 17:26:16,035 p=10604 u=vagrant n=ansible | TASK [Install required packages on CentOS] *************************************
+2024-08-17 17:26:16,075 p=10604 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2024-08-17 17:26:16,082 p=10604 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2024-08-17 17:26:16,091 p=10604 u=vagrant n=ansible | skipping: [web1] => (item=httpd) 
+2024-08-17 17:26:16,101 p=10604 u=vagrant n=ansible | skipping: [web1] => (item=curl) 
+2024-08-17 17:26:16,107 p=10604 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2024-08-17 17:26:21,709 p=10604 u=vagrant n=ansible | changed: [db1] => (item=git)
+2024-08-17 17:26:25,551 p=10604 u=vagrant n=ansible | ok: [db1] => (item=wget)
+2024-08-17 17:26:29,831 p=10604 u=vagrant n=ansible | ok: [db1] => (item=httpd)
+2024-08-17 17:26:33,919 p=10604 u=vagrant n=ansible | ok: [db1] => (item=curl)
+2024-08-17 17:26:37,459 p=10604 u=vagrant n=ansible | ok: [db1] => (item=chrony)
+2024-08-17 17:26:37,485 p=10604 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2024-08-17 17:26:37,486 p=10604 u=vagrant n=ansible | db1                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-17 17:26:37,486 p=10604 u=vagrant n=ansible | web1                       : ok=1    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

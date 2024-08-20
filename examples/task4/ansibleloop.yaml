@@ -1,0 +1,17 @@
+---
+- name: Install packages on CentOS
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install required packages on CentOS
+      yum:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+      loop:
+        - git
+        - wget
+        - httpd
+        - curl
+        - chrony
+      when: ansible_os_family == "RedHat"

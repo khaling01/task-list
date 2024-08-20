@@ -1,0 +1,16 @@
+---
+- name: Adding user from user list
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Add user
+      group:
+        name: devops
+        state: present
+
+    - name: Add users from user list
+      user:
+       name: "{{ item }}"
+       state: present
+       groups: devops
+      loop: "{{ users_list }}"

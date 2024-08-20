@@ -1,0 +1,22 @@
+---
+- name: Setup dbserver
+  hosts: dbservers
+  become: yes
+  tasks:
+    - name: install apache2
+      yum:
+        name: httpd
+        state: present
+        update_cache: yes
+
+    - name: start apache2
+      service: 
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: deploy webconfig
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        
